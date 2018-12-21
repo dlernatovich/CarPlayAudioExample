@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CarPlayView" customModule="CarPlayTest" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="702" height="393"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0yA-tb-2mv">
+                    <rect key="frame" x="0.0" y="344" width="702" height="49"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <items>
+                        <tabBarItem systemItem="favorites" id="J9e-L6-jcA"/>
+                        <tabBarItem systemItem="more" id="MYb-Es-XLP"/>
+                    </items>
+                </tabBar>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COI-qi-Ame">
+                    <rect key="frame" x="20" y="50" width="662" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="onActionClicked:" destination="-1" eventType="touchUpInside" id="doc-oH-JN4"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="0yA-tb-2mv" secondAttribute="bottom" id="0uL-iK-WGK"/>
+                <constraint firstItem="COI-qi-Ame" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="50" id="5hn-nJ-9f8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="COI-qi-Ame" secondAttribute="trailing" constant="20" id="6tC-gu-FIO"/>
+                <constraint firstItem="0yA-tb-2mv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="D57-qS-gCc"/>
+                <constraint firstItem="0yA-tb-2mv" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="eI7-Yn-l51"/>
+                <constraint firstItem="COI-qi-Ame" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="w8V-rl-f1O"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="49.600000000000001" y="87.706146926536732"/>
+        </view>
+    </objects>
+</document>
