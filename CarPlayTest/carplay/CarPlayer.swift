@@ -80,7 +80,7 @@ class CarPlayer: NSObject, MPPlayableContentDataSource, MPPlayableContentDelegat
     func numberOfChildItems(at indexPath: IndexPath) -> Int {
         print("CARPLAY: number of items")
         if indexPath.indices.count == 0 {
-            return 3;
+            return 2;
         } else if indexPath.indices.count == 1 {
             let cell = indexPath[0];
             if (cell == 0) {
@@ -119,16 +119,11 @@ class CarPlayer: NSObject, MPPlayableContentDataSource, MPPlayableContentDelegat
         var item: MPContentItem? = nil;
         if (indexCount == 1) {
             if (tabIndex == 0) {
-                item = self.createItem(withTitle: "Home",
-                                       withSubtitle: nil,
-                                       withContainer: true,
-                                       withArtworkImage: "ic_home");
-            } else if (tabIndex == 1) {
                 item = self.createItem(withTitle: "Music",
                                        withSubtitle: nil,
                                        withContainer: true,
                                        withArtworkImage: "ic_music");
-            } else if (tabIndex == 2) {
+            } else if (tabIndex == 1) {
                 item = self.createItem(withTitle: "Favorites",
                                        withSubtitle: nil,
                                        withContainer: true,
@@ -178,7 +173,7 @@ class CarPlayer: NSObject, MPPlayableContentDataSource, MPPlayableContentDelegat
     func playableContentManager(_ contentManager: MPPlayableContentManager,
                                 initiatePlaybackOfContentItemAt indexPath: IndexPath,
                                 completionHandler: @escaping (Error?) -> Void) {
-        self.play(withUrl: "http://us4.internet-radio.com:8266/", completionHandler: completionHandler);
+        self.play(withUrl: "https://streams.calmradio.com/api/27/192/stream?user=be.tomatom@gmail.com&pass=7c550c9ce54ec79939c8cd208a7e354610934bf2593ba842976aca315973018aab202f7db2b4e3a03e457aaa911c70ae", completionHandler: completionHandler);
     }
     
     /// Method which provide the start playing with URL

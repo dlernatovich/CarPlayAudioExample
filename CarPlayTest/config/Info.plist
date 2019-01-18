@@ -50,5 +50,9 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+    <key>UIBrowsableContentSupportsImmediatePlayback</key>
+    <true/>
+    <key>UIBrowsableContentSupportsSectionedBrowsing</key>
+    <true/>
 </dict>
 </plist>
